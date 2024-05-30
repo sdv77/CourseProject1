@@ -1,4 +1,5 @@
 package com.example.courseproject1;
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -6,9 +7,13 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "users")
 public class User {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id_user")
     private int id;
+    @ColumnInfo(name = "user_name")
     private String name;
+    @ColumnInfo(name = "user_login")
     private String login;
+    @ColumnInfo(name = "user_password")
     private String password;
 
     public User(String name, String login, String password) {
